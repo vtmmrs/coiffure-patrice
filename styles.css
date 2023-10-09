@@ -1,0 +1,317 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: black;
+    margin: 0;
+    padding: 0;
+    perspective: 1.2px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    color: white;
+    letter-spacing: 16px;
+    stroke-width: 1px black;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-95%, -20%);
+}
+
+header,
+header:before {
+    background: 50% 50% / cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(https://www.gstatic.com/bfe/apps/website/img/h/95051567-salon-1440.jpg);
+    /* (resources/img/95051567-salon-1440.jpg) */
+    background-size: cover;
+    opacity: 100%;
+    width: 100%;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 80vh;
+
+    /* FADE IN TRANSITION:
+     transition: background 1.5s ease-in; */
+}
+
+body p {
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: block;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    line-height: 1.5rem;
+    font-weight: lighter;
+    padding: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* grid-column-start: 1;
+    grid-column-end: 7; */
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.intro {
+    max-width: 100%;
+}
+
+.about {
+    background-color: #f0f0f0;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    max-width: 60%;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    padding: auto;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 0.5px;
+    padding-top: 30px;
+}
+
+.box {
+    background-color: #dadada;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.address {
+    grid-column: 1 / span 2;
+    margin-bottom: 20px;
+
+}
+
+.hours {
+    grid-column: 3 / span 2;
+    margin-bottom: 20px;
+
+}
+
+.call-us {
+    grid-column: 5 / span 2;
+    margin-bottom: 20px;
+
+}
+
+.marker {
+    width: 51px;
+    height: 82px;
+}
+
+.clock {
+    width: 75px;
+    height: 75px;
+}
+
+.phone {
+    width: 98px;
+    height: 79px;
+}
+
+.reviews {
+    display: block;
+    max-width: 50%;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial {
+    margin: auto;
+    background-color: #dadada;
+    color: #6c8cde;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3.7px;
+    font-style: italic;
+    padding: auto 20px;
+    border-radius: 10px;
+
+
+}
+
+.one {
+    grid-column: 1 / span 3;
+    grid-row: 5 / 6;
+}
+
+.two {
+    grid-column: 4 / span 3;
+    grid-row: 5 / 6;
+}
+
+footer {
+    position: relative;
+    background-color: #000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 3;
+}
+
+@media(max-width: 600px) {
+
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-row-gap: 20px;
+    }
+
+    header {
+        grid-column: 1 / span 1;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 2.75;
+        letter-spacing: 1.9px;
+        grid-column: 1 / span 1;
+    }
+
+    .dog {
+        width: 195px;
+        height: 237px;
+        padding-left: 50px;
+    }
+
+    .about {
+        grid-column-start: 1;
+        grid-column-end: span 6;
+        grid-column: 1 / span 1;
+    }
+
+    .text {
+        width: 75%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .box {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+
+    .address {
+        grid-row: 4 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .hours {
+        grid-row: 5 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .call-us {
+        grid-row: 6 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .marker {
+        width: 25.5px;
+        height: 40.4px;
+    }
+
+    .clock {
+        width: 37.6px;
+        height: 37.5px;
+    }
+
+    .phone {
+        width: 49px;
+        height: 39.5px;
+    }
+
+    .testimonial {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+
+
+    .one {
+        grid-row: 7 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .two {
+        grid-row: 8 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+}
