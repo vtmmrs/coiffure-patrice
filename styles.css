@@ -53,7 +53,7 @@ header::before {
     right: 0;
     bottom: 0;
     display: block;
-    background: url(https://www.gstatic.com/bfe/apps/website/img/h/95051567-salon-1440.jpg);
+    /* background: url(https://www.gstatic.com/bfe/apps/website/img/h/95051567-salon-1440.jpg); */
     /* (resources/img/95051567-salon-1440.jpg) */
     background-size: cover;
     opacity: 100%;
